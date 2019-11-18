@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/gallery.css">
+	<link rel="stylesheet" href="css/popup.css">
+	<link rel="stylesheet" href="css/form.css">
+	<script src="js/script.js"></script>
+	<title>Tesk task - Photo Gallery</title>
+</head>
+<body>
+	<h1 align="center">Тестовое задание - Фотогалерея</h1>
+	<div class="sheath">
+		<div class="left">
+			<h1 align="center">Список альбомов:</h1>
+					<div class="catalog-left">
+
+							<p class="album-name">Свадьба Алены</p>
+							<p class="description">Альбом о свадьбе</p>
+							<img src="images/1.jpg" alt="">
+					</div>
+					<div class="catalog-left">
+							<p class="album-name">Английский</p>
+							<p class="description">Альбом об ангийском</p>
+							<img src="images/3.png" alt="">
+							<img src="images/4.png" alt="">
+							<img src="images/5.png" alt="">
+							<img src="images/6.png" alt="">
+							<img src="images/7.png" alt="">
+
+					</div>
+					<div class="catalog-left">
+							<p class="album-name">Одежда</p>
+							<p class="description">Альбом об одежде</p>
+							<img src="images/8.png" alt
+							<img src="images/9.png" alt="">
+							<img src="images/10.png" alt="">
+							<img src="images/11.png" alt="">
+					</div>
+		</div>
+
+		<div class="center">
+			<div class="container">
+				<div class="albumName">
+					<h1 class="heading" id="firstDescription"> </h1>
+				</div>
+				<p class="catalog-description"></p>
+				<div class="gallery"></div>
+			</div>
+			<div class="gallery"></div>
+		</div>
+
+		<div class="rigth">
+			<h1 align="center">Действия:</h1>
+				<div class="navigations-right" id="add-album">
+						<p>Добавить альбом</p>
+				</div>
+				<div class="navigations-right" id="delete-album">
+						<p>Удалить альбом</p>
+				</div>
+				<div class="navigations-right" id="edit-album">
+						<p>Редактировать альбом</p>
+				</div>
+				<div class="navigations-right" id="delete-photo">
+						<p>Удалить фото из текущего альбома</p>
+				</div>
+				<div class="navigations-right" id="add-photo">
+						<p>Добавить фото в текущий альбом</p>
+				</div>
+		</div>
+	</div>
+
+
+	<div class="show">
+			<div class="overlay"></div>
+			<div class="img-show">
+				<span>X</span>
+				<img src="">
+			</div>
+	</div>
+
+	<div class="form-main open-close"  id="add-album-form">
+		<div class="form-div">
+				<p class="name">
+					<input name="name" type="text" class="validate[custom[onlyLetter],length[0,100]] feedback-input name" placeholder="Имя" id="add-catalog-input-name" />
+				</p>
+
+				<p class="text">
+						<textarea name="text" class="validate[required,length[6,300]] feedback-input comment" id="add-catalog-textarea-description" placeholder="Описание альбома"></textarea>
+				</p>
+
+				<div class="submit" >
+					<input type="button" value="Добавить альбом" id="button-add"/>
+				</div>
+
+				<div class="submit" >
+					<input type="button" value="Закрыть" id="add-button-close"/>
+				</div>
+
+		</div>
+	</div>
+ <!-- Форма Удалить альбом -->
+	<div class="form-main open-close"  id="del-album-form">
+			<div class="form-div">
+					<p class="text">
+							<select name="dell-form-album" class="validate[required,length[6,300]] feedback-input comment" id="select-form-dell-album" >
+									<option value="0" disabled selected>--- select album ---</option>
+							</select>
+					</p>
+					<div class="submit" >
+						<input type="button" value="Удалить альбом" id="button-dell"/>
+					</div>
+					<div class="submit" >
+						<input type="button" value="Закрыть" id="button-close"/>
+
+					</div>
+			</div>
+	</div>
+
+	<div class="form-main open-close"  id="edit-album-form">
+		<div class="form-div">
+
+				<p class="text">
+						<select name="edit-form-album" class="validate[required,length[6,300]] feedback-input comment" id="select-form-edit-album" >
+								<option value="0" disabled selected>--- select album ---</option>
+						</select>
+				</p>
+
+				<div class="submit" >
+						<input type="button" value="выбрать" id="button-edit-choose"/>
+				</div>
+
+				<p class="name">
+					<input name="name" type="text" class="validate[custom[onlyLetter],length[0,100]] feedback-input name" placeholder="" id="edit-catalog-input-name" />
+				</p>
+				<p class="text">
+						<textarea name="text" class="validate[required,length[6,300]] feedback-input comment" id="edit-catalog-textarea-description" placeholder=""></textarea>
+				</p>
+
+				<div class="submit" >
+					<input type="button" value="Сохранить и выйти" id="button-edit"/>
+				</div>
+
+				<div class="submit" >
+					<input type="button" value="Отмена" id="edit-button-close"/>
+				</div>
+		</div>
+	</div>
+
+
+	<div class="form-main open-close"  id="add-photo-form">
+		<div class="form-div">
+			<p class="name">
+				<input name="name" type="text" class="validate[custom[onlyLetter],length[0,100]] feedback-input name" placeholder="полный путь к фотографии" id="add-photo-input-name" />
+			</p>
+			<div class="submit" >
+				<input type="button" value="Добавить фото" id="button-add-photo"/>
+			</div>
+			<div class="submit" >
+				<input type="button" value="Отмена" id="button-close-form-photo"/>
+			</div>
+		</div>
+	</div>
+
+		 <div class="form-main open-close"  id="del-photo-form">
+				<div class="form-div">
+					<div class="container-dell-photo">
+
+						<div class="photo">
+						</div>
+
+					</div>
+					<div class="submit" >
+						<input type="button" value="Удалить фото" id="button-dell-photo"/>
+					</div>
+					<div class="submit" >
+						<input type="button" value="Закрыть" id="button-close-photo"/>
+					</div>
+				</div>
+		</div>
+
+</body>
+</html>

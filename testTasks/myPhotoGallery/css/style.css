@@ -1,0 +1,125 @@
+html {
+	background: white;
+  background-size: cover;
+  height:100%;
+	weight:80%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+.sheath {
+	max-width: 100%;
+  margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.left, .rigth, .center {
+	display: flex;
+}
+.left {
+	flex: 1;
+	display: flex;
+	flex-flow: column nowrap;
+
+}
+.rigth {
+	flex: 1;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.center {
+	flex: 5;
+	display: flex;
+	flex-flow: column;
+}
+
+
+
+/* centr */
+.albumName {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  outline: none;
+  text-align: center;
+  letter-spacing: 1px;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(15, 15, 15, 0.2);
+
+}
+/* end centr */
+
+/* left */
+.catalog-left, .navigations-right {
+	width: 100%;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  outline: none;
+  text-align: center;
+  border: 1px solid #fff;
+  color: rgba(17, 17, 17, 0.6);
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  /* -webkit-transition: all 0.25s ease; */
+  transition: all 0.25s ease;
+	font-family: Arial, sans-serif;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(15, 15, 15, 0.2);
+	cursor: pointer;
+}
+
+.catalog-left:hover, .navigations-right:hover {
+	color: white;
+  background: #1abc9c;
+}
+
+.catalog-left img, .description {
+	display: none;
+}
+
+.button {
+  margin-top: 20px;
+  background: red;
+  border: none;
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius: 40px;
+  background: #fff;
+  border: 2px solid #1abc9c;
+  color: #1abc9c;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  /* -webkit-transition: all 0.25s ease; */
+  transition: all 0.25s ease;
+  font-family: Arial, sans-serif;
+}
+
+button:hover {
+  color: white;
+  background: #1abc9c;
+}
+button:active {
+  color: white;
+  background: #1abc9c;
+}
+
+.hidden {
+  visibility: hidden;
+}

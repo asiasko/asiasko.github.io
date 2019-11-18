@@ -13,10 +13,8 @@
     left: 0;
 }
 .show .img-show {
-    width: 60%;
-    height: 65%;
-  /*  width: auto;
-    height: auto;*/
+    width: 90%;
+    height: 48%;
     position: absolute;
     background: #FFF;
     top: 50%;
